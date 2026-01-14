@@ -29,26 +29,26 @@ const ServiceModal = ({ service, isOpen, onClose }) => {
   if (!service) return null;
 
   const serviceDetails = {
-    "Web Development": {
+    "Website Development": {
       overview: "Build scalable, high-performance web applications using cutting-edge technologies and industry best practices.",
       process: ["Discovery & Planning", "Architecture Design", "Development & Testing", "Deployment & Optimization"],
       technologies: ["React/Next.js", "Node.js", "TypeScript", "GraphQL", "AWS/Azure"],
       timeline: "4-12 weeks",
       deliverables: ["Responsive Web Application", "Source Code", "Documentation", "Deployment Guide"]
     },
-    "Mobile Apps": {
+    "Mobile Application": {
       overview: "Create native and cross-platform mobile applications with exceptional user experience and performance.",
       process: ["UX Research", "Prototype Development", "Native Development", "App Store Deployment"],
       technologies: ["React Native", "Flutter", "iOS SDK", "Android SDK", "Firebase"],
       timeline: "6-16 weeks",
       deliverables: ["Mobile Application", "App Store Listing", "Analytics Setup", "Maintenance Plan"]
     },
-    "Cloud Solutions": {
-      overview: "Design and implement scalable cloud infrastructure with automated deployment and monitoring.",
-      process: ["Infrastructure Assessment", "Architecture Planning", "Migration Strategy", "Optimization"],
-      technologies: ["AWS", "Azure", "Docker", "Kubernetes", "Terraform"],
-      timeline: "2-8 weeks",
-      deliverables: ["Cloud Infrastructure", "Migration Plan", "Monitoring Setup", "Cost Optimization"]
+    "Software Development": {
+      overview: "Custom software solutions engineered to solve complex business challenges with reliability and scalability.",
+      process: ["Requirements Gathering", "System Architecture", "Agile Development", "Quality Assurance"],
+      technologies: ["Java", "Python", ".NET", "PostgreSQL", "Microservices"],
+      timeline: "8-24 weeks",
+      deliverables: ["Custom Software", "Source Code", "System Architecture Documentation", "User Training"]
     },
     "AI & Automation": {
       overview: "Implement intelligent automation and machine learning solutions to optimize business processes.",
@@ -57,26 +57,19 @@ const ServiceModal = ({ service, isOpen, onClose }) => {
       timeline: "8-20 weeks",
       deliverables: ["AI Model", "Automation Scripts", "Integration Guide", "Training Materials"]
     },
-    "Cybersecurity": {
-      overview: "Comprehensive security assessment and implementation of robust protection measures.",
-      process: ["Security Audit", "Vulnerability Assessment", "Solution Implementation", "Ongoing Monitoring"],
-      technologies: ["Penetration Testing", "SIEM", "Encryption", "Zero Trust", "Compliance"],
-      timeline: "3-10 weeks",
-      deliverables: ["Security Report", "Implementation Plan", "Security Policies", "Monitoring Dashboard"]
-    },
-    "UI/UX Design": {
-      overview: "Create user-centered designs that drive engagement and conversion through research-backed solutions.",
-      process: ["User Research", "Wireframing", "Visual Design", "Prototype Testing"],
-      technologies: ["Figma", "Adobe Creative Suite", "Principle", "InVision", "Miro"],
-      timeline: "4-8 weeks",
-      deliverables: ["Design System", "Prototypes", "Style Guide", "Handoff Documentation"]
-    },
     "Consulting": {
       overview: "Strategic technology consulting to guide digital transformation and innovation initiatives.",
       process: ["Business Analysis", "Technology Assessment", "Strategy Development", "Implementation Roadmap"],
       technologies: ["Enterprise Architecture", "Digital Strategy", "Innovation Framework", "Change Management"],
       timeline: "2-6 weeks",
       deliverables: ["Strategic Report", "Technology Roadmap", "Implementation Plan", "ROI Analysis"]
+    },
+    "Cloud Solutions": {
+      overview: "Design and implement scalable cloud infrastructure with automated deployment and monitoring.",
+      process: ["Infrastructure Assessment", "Architecture Planning", "Migration Strategy", "Optimization"],
+      technologies: ["AWS", "Azure", "Docker", "Kubernetes", "Terraform"],
+      timeline: "2-8 weeks",
+      deliverables: ["Cloud Infrastructure", "Migration Plan", "Monitoring Setup", "Cost Optimization"]
     },
     "Digital Marketing": {
       overview: "Comprehensive digital marketing strategies designed to increase brand visibility, generate qualified leads, and drive measurable business growth through data-driven campaigns and multi-channel approaches.",
@@ -221,75 +214,59 @@ export default function Services() {
   const services = [
     {
       icon: Code,
-      title: "Web Development",
+      title: "Website Development",
       description: "Enterprise-grade web applications built with modern frameworks, optimized for performance, scalability, and user experience.",
-      gradient: "from-blue-500 to-cyan-500",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=250&fit=crop&auto=format",
+      gradient: "from-[#3480cb] to-[#52b9fd]",
       features: ["React & Next.js", "Performance Optimized", "Scalable Architecture"],
       delay: 0
     },
     {
       icon: Smartphone,
-      title: "Mobile Apps",
+      title: "Mobile Application",
       description: "Native and cross-platform mobile solutions delivering exceptional user experiences across iOS and Android platforms.",
-      gradient: "from-cyan-500 to-blue-500",
-      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=250&fit=crop&auto=format",
+      gradient: "from-[#3480cb] to-[#52b9fd]",
       features: ["Cross-Platform", "Native Performance", "App Store Ready"],
       delay: 0.1
     },
     {
-      icon: Cloud,
-      title: "Cloud Solutions",
-      description: "Scalable cloud infrastructure design and implementation with automated deployment and comprehensive monitoring.",
-      gradient: "from-blue-500 to-cyan-500",
-      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=250&fit=crop&auto=format",
-      features: ["AWS & Azure", "Auto Scaling", "High Availability"],
+      icon: Settings,
+      title: "Software Development",
+      description: "Custom software solutions engineered to solve complex business challenges with reliability and scalability.",
+      gradient: "from-[#3480cb] to-[#52b9fd]",
+      features: ["Custom Solutions", "Enterprise Architecture", "Legacy Integration"],
       delay: 0.2
     },
     {
       icon: Bot,
       title: "AI & Automation",
       description: "Intelligent automation solutions and machine learning implementations to optimize operations and drive efficiency.",
-      gradient: "from-cyan-500 to-blue-500",
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=250&fit=crop&auto=format",
+      gradient: "from-[#3480cb] to-[#52b9fd]",
       features: ["Machine Learning", "Process Automation", "Intelligent Analytics"],
       delay: 0.3
-    },
-    {
-      icon: Shield,
-      title: "Cybersecurity",
-      description: "Comprehensive security assessments and implementations to protect digital assets and ensure regulatory compliance.",
-      gradient: "from-blue-500 to-cyan-500",
-      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=250&fit=crop&auto=format",
-      features: ["Security Audits", "Compliance", "Threat Protection"],
-      delay: 0.4
-    },
-    {
-      icon: Paintbrush,
-      title: "UI/UX Design",
-      description: "User-centered design solutions backed by research and testing to maximize engagement and conversion rates.",
-      gradient: "from-cyan-500 to-blue-500",
-      image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=250&fit=crop&auto=format",
-      features: ["User Research", "Design Systems", "Conversion Optimization"],
-      delay: 0.5
     },
     {
       icon: Lightbulb,
       title: "Consulting",
       description: "Strategic technology consulting and digital transformation guidance to accelerate business growth and innovation.",
-      gradient: "from-blue-500 to-cyan-500",
-      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=250&fit=crop&auto=format",
+      gradient: "from-[#3480cb] to-[#52b9fd]",
       features: ["Digital Strategy", "Technology Roadmap", "Innovation Planning"],
-      delay: 0.6
+      delay: 0.4
     },
     {
-      icon: Settings,
+      icon: Cloud,
+      title: "Cloud Solutions",
+      description: "Scalable cloud infrastructure design and implementation with automated deployment and comprehensive monitoring.",
+      gradient: "from-[#3480cb] to-[#52b9fd]",
+      features: ["AWS & Azure", "Auto Scaling", "High Availability"],
+      delay: 0.5
+    },
+    {
+      icon: Paintbrush,
       title: "Digital Marketing",
       description: "Data-driven marketing strategies and campaigns to boost online presence and drive measurable business growth.",
-      gradient: "from-cyan-500 to-blue-500",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop&auto=format",
+      gradient: "from-[#3480cb] to-[#52b9fd]",
       features: ["SEO & SEM", "Social Media Marketing", "Analytics & ROI Tracking"],
-      delay: 0.7
+      delay: 0.6
     }
   ];
 
@@ -326,9 +303,8 @@ export default function Services() {
               <span className="text-blue-600 font-semibold text-lg tracking-wide uppercase bg-gradient-to-r from-blue-50 to-cyan-50 px-4 py-2 rounded-full border border-blue-200">Our Expertise</span>
             </motion.div>
             
-            <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Professional
-              <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent"> Services</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">
+              Professional Services
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Comprehensive technology solutions engineered to accelerate your digital transformation 
@@ -337,7 +313,7 @@ export default function Services() {
           </motion.div>
 
           {/* Enhanced Services Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={index}
@@ -348,36 +324,28 @@ export default function Services() {
                 className="group cursor-pointer"
               >
                 <GlassCard className="rounded-3xl overflow-hidden h-full hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-700 transform group-hover:scale-[1.03] group-hover:-translate-y-2 relative border-2 hover:border-blue-300/50">
-                  {/* Enhanced Image */}
-                  <div className="relative overflow-hidden">
-                    <img 
-                      src={service.image} 
-                      alt={service.title}
-                      className="w-full h-48 object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-blue-500/10 group-hover:from-blue-900/30"></div>
-                    
-                    {/* Enhanced Icon */}
-                    <motion.div 
-                      whileHover={{ rotate: 5, scale: 1.1 }}
-                      transition={{ type: "spring", damping: 15 }}
-                      className={`absolute top-4 right-4 w-14 h-14 bg-gradient-to-br ${service.gradient} rounded-2xl flex items-center justify-center shadow-xl shadow-blue-500/40 transform transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-blue-500/50`}
-                    >
-                      <service.icon className="w-7 h-7 text-white" />
-                    </motion.div>
-                  </div>
+                  <div className={`h-2 w-full bg-gradient-to-r ${service.gradient}`}></div>
+                  <div className="p-8">
+                    <div className="flex items-center justify-between mb-6">
+                      <motion.div 
+                        whileHover={{ rotate: 5, scale: 1.1 }}
+                        transition={{ type: "spring", damping: 15 }}
+                        className={`w-14 h-14 bg-gradient-to-br ${service.gradient} rounded-2xl flex items-center justify-center shadow-xl shadow-blue-500/40 transform transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-blue-500/50`}
+                      >
+                        <service.icon className="w-7 h-7 text-white" />
+                      </motion.div>
+                    </div>
 
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-cyan-600 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-500">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-cyan-600 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-500">
                       {service.title}
                     </h3>
                     
-                    <p className="text-gray-600 leading-relaxed mb-4 text-sm group-hover:text-gray-700 transition-colors duration-300">
+                    <p className="text-gray-600 leading-relaxed mb-6 text-base group-hover:text-gray-700 transition-colors duration-300">
                       {service.description}
                     </p>
 
                     {/* Enhanced Features */}
-                    <div className="mb-6 space-y-2">
+                    <div className="mb-8 space-y-3">
                       {service.features.map((feature, featureIndex) => (
                         <motion.div 
                           key={featureIndex} 
@@ -386,7 +354,7 @@ export default function Services() {
                           transition={{ delay: featureIndex * 0.1 }}
                           className="flex items-center text-sm text-gray-600 group-hover:text-blue-600 transition-colors duration-300"
                         >
-                          <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mr-3 flex-shrink-0 group-hover:shadow-md group-hover:shadow-blue-500/50 transition-all duration-300"></div>
+                          <div className={`w-2 h-2 bg-gradient-to-r ${service.gradient} rounded-full mr-3 flex-shrink-0 group-hover:shadow-md group-hover:shadow-blue-500/50 transition-all duration-300`}></div>
                           {feature}
                         </motion.div>
                       ))}
@@ -404,11 +372,15 @@ export default function Services() {
                           Learn More 
                           <ArrowRight className="w-4 h-4 ml-2 transition-all duration-500 group-hover/btn:translate-x-2 group-hover/btn:scale-110" />
                         </span>
-                        <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-600 opacity-0 group-hover/btn:opacity-100 transition-all duration-500"></div>
+                        <div className="absolute inset-0 bg-gradient-to-r from-[#3480cb] to-[#52b9fd] brightness-90 opacity-0 group-hover/btn:opacity-100 transition-all duration-500"></div>
                         <div className="absolute inset-0 bg-white/10 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
                       </motion.button>
                     </div>
                   </div>
+                </GlassCard>
+              </motion.div>
+            ))}
+          </div>
 
                   {/* Enhanced Hover Effect */}
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-500/10 via-transparent to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-all duration-700 pointer-events-none"></div>
