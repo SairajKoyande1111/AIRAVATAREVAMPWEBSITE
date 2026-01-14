@@ -53,14 +53,18 @@ export default function Services() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light mb-4 sm:mb-6 leading-tight tracking-tight text-gray-900 max-w-4xl mx-auto flex flex-col items-center">
-              <span className="whitespace-nowrap">Innovative Technology Services</span>
-              <span className="text-[#52b9fd] whitespace-nowrap">for Business Growth</span>
-            </h2>
+            <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-light mb-4 sm:mb-6 leading-tight tracking-wide">
+              <span className="text-black tracking-wide sm:tracking-wider md:tracking-widest block uppercase">
+                Innovative Technology Services
+              </span>
+              <span className="text-black text-sm xs:text-base sm:text-lg md:text-xl lg:text-4xl block mt-2 text-blue-500">
+                for Business Growth
+              </span>
+            </h1>
           </motion.div>
 
           {/* Services Grid */}
