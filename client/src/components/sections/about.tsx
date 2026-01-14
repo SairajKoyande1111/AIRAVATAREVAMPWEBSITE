@@ -551,107 +551,7 @@ const AchievementTimeline = () => {
 //   );
 // };
 
-// Enhanced Values Component (with full-screen video in each box)
-const CoreValues = () => {
-  const values = [
-    {
-      title: "Innovation",
-      description: "Driving forward-thinking solutions that create measurable impact and lasting business advantage.",
-      color: "from-blue-500 to-blue-600"
-    },
-    {
-      title: "Quality",
-      description: "Delivering reliable, high-performance solutions through rigorous standards and attention to detail.",
-      color: "from-blue-600 to-cyan-500"
-    },
-    {
-      title: "Partnership",
-      description: "Building trusted, long-term collaborations focused on shared growth and mutual success.",
-      color: "from-cyan-500 to-cyan-600"
-    },
-    {
-      title: "Agility",
-      description: "Executing efficiently with adaptability, speed, and modern development practices.",
-      color: "from-cyan-600 to-blue-500"
-    }
-  ];
-
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4 md:px-0 max-w-lg md:max-w-none mx-auto">
-      {values.map((value, index) => (
-        <motion.div
-          key={index}
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="group w-full"
-        >
-          <div className="relative h-72 md:h-80 rounded-xl overflow-hidden group-hover:scale-[1.02] transition-all duration-500 shadow-xl bg-slate-900">
-            {/* Original video background, no grayscale or tint filters */}
-            <div className="absolute inset-0 z-0">
-              <video
-                className="w-full h-full object-cover"
-                autoPlay
-                loop
-                muted
-                playsInline
-              >
-                <source src="/videos/blue.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            
-            {/* Content overlay */}
-            <div className="relative z-10 p-8 h-full flex flex-col items-center">
-              {/* Header fixed at top with set height for alignment */}
-              <div className="h-12 flex items-center justify-center w-full mb-4">
-                <motion.h4
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 + 0.3 }}
-                  viewport={{ once: true }}
-                  className="font-medium text-2xl tracking-wide text-center text-white"
-                  style={{ fontFamily: "'Inter', 'Segoe UI', 'Roboto', 'system-ui', sans-serif" }}
-                >
-                  {value.title}
-                </motion.h4>
-              </div>
-              
-              {/* Description centered vertically in remaining space */}
-              <div className="flex-1 flex items-center w-full">
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 + 0.5 }}
-                  viewport={{ once: true }}
-                  className="text-white leading-relaxed text-center text-lg font-light tracking-normal px-1"
-                  style={{ fontFamily: "'Inter', 'Segoe UI', 'Roboto', 'system-ui', sans-serif" }}
-                >
-                  {value.description}
-                </motion.p>
-              </div>
-              
-              {/* Bottom section with accent line */}
-              <div className="text-center mt-4 w-full flex flex-col justify-end pb-2">
-                <motion.div
-                  className="w-16 h-0.5 bg-white/60 rounded-full mx-auto"
-                  initial={{ scaleX: 0 }}
-                  whileInView={{ scaleX: 1 }}
-                  transition={{ duration: 1, delay: index * 0.1 + 0.7 }}
-                  viewport={{ once: true }}
-                />
-              </div>
-            </div>
-            
-            {/* Hover effect overlay */}
-            <div className="absolute inset-0 z-5 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-          </div>
-        </motion.div>
-      ))}
-    </div>
-  );
-};
+// Enhanced Leadership Component
 
 export default function ProfessionalAbout() {
   const containerRef = useRef(null);
@@ -688,22 +588,10 @@ export default function ProfessionalAbout() {
           >
             Transforming Business Through
             <br />
-            <span className="font-light bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 bg-clip-text text-transparent">
+            <span className="font-light bg-gradient-to-r from-blue-500 via-blue-500 to-cyan-500 bg-clip-text text-transparent">
               Innovative Technology
             </span>
           </motion.h1>
-          
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-            viewport={{ once: true }}
-            className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light text-justify md:text-center px-4"
-          >
-            We are a premier technology consultancy specializing in enterprise digital transformation, 
-            artificial intelligence solutions, and scalable software architecture. Our commitment to excellence 
-            drives measurable business outcomes for organizations worldwide.
-          </motion.p>
         </motion.div>
 
         {/* Video Section - Replaces Statistics */}
@@ -752,57 +640,6 @@ export default function ProfessionalAbout() {
           </div>
         </motion.div>
 
-        {/* Core Values Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="mb-24"
-        >
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">Our Core Values</h2>
-            <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light text-justify md:text-center px-4">
-              The principles that guide our approach to technology, innovation, and client success.
-            </p>
-          </div>
-          <CoreValues />
-        </motion.div>
-
-        {/* Mission Statement */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="px-4"
-        >
-          <GlassCard variant="highlight" className="rounded-3xl p-8 md:p-16 text-center">
-            <motion.div
-              initial={{ scale: 0.95, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 1, ease: "easeOut" }}
-              viewport={{ once: true }}
-              className="max-w-5xl mx-auto flex flex-col items-center"
-            >
-              <h2 className="text-2xl md:text-3xl font-light text-gray-900 mb-6 md:mb-8 whitespace-normal">Our Commitment to Excellence</h2>
-              <p className="text-lg md:text-2xl font-light text-gray-700 leading-relaxed mb-8 text-center px-2">
-                "We are committed to delivering technology solutions that not only meet today's challenges 
-                but anticipate tomorrow's opportunities. Our success is measured by the sustainable growth 
-                and competitive advantage we create for our clients."
-              </p>
-              <div className="flex justify-center w-full">
-                <motion.div
-                  className="w-32 h-1 bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-500 rounded-full"
-                  initial={{ scaleX: 0 }}
-                  whileInView={{ scaleX: 1 }}
-                  transition={{ duration: 1.5, delay: 0.5, ease: "easeOut" }}
-                  viewport={{ once: true }}
-                />
-              </div>
-            </motion.div>
-          </GlassCard>
-        </motion.div>
       </div>
     </section>
   );
