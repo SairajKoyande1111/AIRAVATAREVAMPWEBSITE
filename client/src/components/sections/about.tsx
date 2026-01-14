@@ -775,22 +775,23 @@ export default function ProfessionalAbout() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
+          className="px-4"
         >
-          <GlassCard variant="highlight" className="rounded-3xl p-6 md:p-16 text-center">
+          <GlassCard variant="highlight" className="rounded-3xl p-8 md:p-16 text-center">
             <motion.div
               initial={{ scale: 0.95, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1, ease: "easeOut" }}
               viewport={{ once: true }}
-              className="max-w-5xl mx-auto"
+              className="max-w-5xl mx-auto flex flex-col items-center"
             >
-              <h2 className="text-2xl md:text-3xl font-light text-gray-900 mb-6 md:mb-8 whitespace-nowrap md:whitespace-normal">Our Commitment to Excellence</h2>
-              <p className="text-lg md:text-2xl font-light text-gray-700 leading-relaxed mb-8 px-4 md:px-0 text-justify md:text-center">
+              <h2 className="text-2xl md:text-3xl font-light text-gray-900 mb-6 md:mb-8 whitespace-normal">Our Commitment to Excellence</h2>
+              <p className="text-lg md:text-2xl font-light text-gray-700 leading-relaxed mb-8 text-center px-2">
                 "We are committed to delivering technology solutions that not only meet today's challenges 
                 but anticipate tomorrow's opportunities. Our success is measured by the sustainable growth 
                 and competitive advantage we create for our clients."
               </p>
-              <div className="flex justify-center">
+              <div className="flex justify-center w-full">
                 <motion.div
                   className="w-32 h-1 bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-500 rounded-full"
                   initial={{ scaleX: 0 }}
