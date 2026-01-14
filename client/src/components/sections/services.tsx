@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 // Professional Glass Card Component with Blue-Cyan Theme
 const GlassCard = ({ children, className = "" }: { children: React.ReactNode, className?: string }) => (
-  <div className={`backdrop-blur-sm bg-white/80 border border-blue-200/40 shadow-xl shadow-blue-500/10 ${className}`}>
+  <div className={`backdrop-blur-sm bg-white/80 border border-blue-200/40 shadow-none ${className}`}>
     {children}
   </div>
 );
@@ -79,7 +79,7 @@ export default function Services() {
                 viewport={{ once: true }}
                 className="group"
               >
-                <GlassCard className="rounded-3xl overflow-hidden h-full hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-700 transform group-hover:scale-[1.03] group-hover:-translate-y-2 relative border-2 hover:border-blue-300/50 flex flex-col">
+                <GlassCard className="rounded-3xl overflow-hidden h-full hover:shadow-none transition-all duration-700 transform group-hover:scale-[1.03] group-hover:-translate-y-2 relative border-0 flex flex-col">
                   <div className={`h-2 w-full bg-gradient-to-r ${service.gradient}`}></div>
                   <div className="p-8 text-center flex-1 flex flex-col items-center justify-center min-h-[160px]">
                     <h3 className="text-3xl md:text-4xl font-light text-gray-900 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-cyan-600 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-500 leading-tight tracking-tight whitespace-nowrap">
