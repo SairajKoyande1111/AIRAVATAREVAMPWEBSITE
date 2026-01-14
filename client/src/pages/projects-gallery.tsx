@@ -1,3 +1,4 @@
+import React from "react";
 import { Link, useParams } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -115,7 +116,7 @@ export default function ProjectsGallery() {
                 {service?.title}
               </h2>
               <p className="text-sm sm:text-lg lg:text-xl text-gray-600 dark:text-gray-600">
-                Explore our portfolio of {service?.title.toLowerCase()} projects
+                Explore our portfolio of {service?.title?.toLowerCase() || "modern"} projects
               </p>
             </>
           )}

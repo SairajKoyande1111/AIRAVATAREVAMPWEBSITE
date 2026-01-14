@@ -4,7 +4,7 @@ import { ExternalLink, X, Play, Github, Globe } from "lucide-react";
 import { Button } from "../ui/button";
 
 // Enhanced ProjectCard component with video support
-function ProjectCard({ title, description, image, tags, videoUrl, onViewDetails }) {
+function ProjectCard({ title, description, image, tags, videoUrl, onViewDetails }: any) {
   return (
     <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
       <div className="relative group">
@@ -26,7 +26,7 @@ function ProjectCard({ title, description, image, tags, videoUrl, onViewDetails 
         <p className="text-gray-600 mb-4 line-clamp-2 flex-grow">{description}</p>
 
         <div className="flex flex-wrap gap-2 mb-4">
-          {tags.map((tag, index) => (
+          {tags.map((tag: string, index: number) => (
             <span
               key={index}
               className="px-3 py-1 bg-gradient-to-r from-blue-100 to-cyan-100 text-blue-700 text-sm rounded-full font-medium"
@@ -36,20 +36,20 @@ function ProjectCard({ title, description, image, tags, videoUrl, onViewDetails 
           ))}
         </div>
 
-        <button
+        <Button
           onClick={onViewDetails}
           className="w-full bg-gradient-to-r from-blue-600 to-blue-500 text-white font-semibold py-2 rounded-lg hover:shadow-lg transition-all duration-300 flex items-center justify-center mt-auto"
         >
           View Details
           <ExternalLink className="w-4 h-4 ml-2" />
-        </button>
+        </Button>
       </div>
     </div>
   );
 }
 
 // Image Zoom Modal
-function ImageZoomModal({ imageSrc, alt, isOpen, onClose }) {
+function ImageZoomModal({ imageSrc, alt, isOpen, onClose }: any) {
   if (!isOpen) return null;
 
   return (
@@ -86,13 +86,13 @@ function ImageZoomModal({ imageSrc, alt, isOpen, onClose }) {
 }
 
 // Project Details Modal
-function ProjectDetailsModal({ project, isOpen, onClose }) {
-  const [zoomedImage, setZoomedImage] = useState(null);
+function ProjectDetailsModal({ project, isOpen, onClose }: any) {
+  const [zoomedImage, setZoomedImage] = useState<any>(null);
   const [isImageZoomOpen, setIsImageZoomOpen] = useState(false);
 
   if (!project) return null;
 
-  const handleImageClick = (imageSrc, alt) => {
+  const handleImageClick = (imageSrc: string, alt: string) => {
     setZoomedImage({ src: imageSrc, alt });
     setIsImageZoomOpen(true);
   };
@@ -153,7 +153,7 @@ function ProjectDetailsModal({ project, isOpen, onClose }) {
               <div className="mb-8">
                 <h3 className="text-lg font-semibold mb-4">Project Gallery</h3>
                 <div className="grid md:grid-cols-2 gap-4">
-                  {project.images.map((img, index) => (
+                  {project.images.map((img: string, index: number) => (
                     <div
                       key={index}
                       className="rounded-lg overflow-hidden shadow-md cursor-pointer hover:shadow-xl transition-shadow"
@@ -179,7 +179,7 @@ function ProjectDetailsModal({ project, isOpen, onClose }) {
               <div className="mb-8">
                 <h3 className="text-lg font-semibold mb-4">Technologies Used</h3>
                 <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag, index) => (
+                  {project.tags.map((tag: string, index: number) => (
                     <span
                       key={index}
                       className="px-4 py-2 bg-gradient-to-r from-blue-100 to-cyan-100 text-blue-700 rounded-full font-medium"
@@ -194,7 +194,7 @@ function ProjectDetailsModal({ project, isOpen, onClose }) {
               <div className="mb-8">
                 <h3 className="text-lg font-semibold mb-4">Key Features</h3>
                 <ul className="space-y-2">
-                  {project.features.map((feature, index) => (
+                  {project.features.map((feature: string, index: number) => (
                     <li key={index} className="flex items-start">
                       <span className="w-2 h-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                       <span className="text-gray-600">{feature}</span>
