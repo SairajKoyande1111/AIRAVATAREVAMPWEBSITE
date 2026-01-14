@@ -57,9 +57,9 @@ export default function Services() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl md:text-5xl font-light text-gray-900 leading-[1.2] tracking-normal max-w-4xl mx-auto">
+            <h2 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-light mb-4 sm:mb-6 leading-tight tracking-wide text-gray-900 max-w-4xl mx-auto">
               Innovative Technology Services<br />
-              <span className="text-blue-500/80">for Business Growth</span>
+              <span className="text-blue-500/90">for Business Growth</span>
             </h2>
           </motion.div>
 
