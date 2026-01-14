@@ -43,7 +43,7 @@ export default function Services() {
 
   return (
     <>
-      <section id="services" className="py-4 bg-white relative overflow-hidden">
+      <section id="services" className="py-2 md:py-12 bg-white relative overflow-hidden">
         {/* Background Elements */}
         <div className="absolute top-20 left-10 w-96 h-96 bg-blue-300/10 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-float"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-300/10 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-float-delayed"></div>
