@@ -762,9 +762,8 @@ export default function ProfessionalAbout() {
         >
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">Our Core Values</h2>
-            <p className="text-lg md:text-xl text-gray-600 max-w-[320px] md:max-w-none mx-auto leading-relaxed font-light text-center px-8 md:px-0">
-              The principles that guide our approach to technology,<br className="md:hidden" />
-              innovation, and client success.
+            <p className="text-lg md:text-xl text-gray-600 max-w-[420px] md:max-w-none mx-auto leading-relaxed font-light text-center px-6 md:px-0">
+              The principles that guide our approach to technology,<br className="md:hidden" /> innovation, and client success.
             </p>
           </div>
           <CoreValues />
