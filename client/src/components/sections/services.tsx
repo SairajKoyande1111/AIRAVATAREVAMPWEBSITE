@@ -55,11 +55,11 @@ export default function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="text-center mb-6"
+            className="text-center mb-12"
           >
-            <h2 className="text-4xl md:text-5xl font-light text-gray-900 leading-tight tracking-tight max-w-4xl mx-auto">
-              Innovative Technology Services <br className="hidden md:block" />
-              <span className="text-blue-500">for Business Growth</span>
+            <h2 className="text-4xl md:text-5xl font-light text-gray-900 leading-[1.2] tracking-normal max-w-4xl mx-auto">
+              Innovative Technology Services<br />
+              <span className="text-blue-500/80">for Business Growth</span>
             </h2>
           </motion.div>
 
