@@ -2,19 +2,7 @@ import { useState } from "react";
 import { useLocation } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
-  Code, 
-  Smartphone, 
-  Cloud, 
-  Bot, 
-  Shield, 
-  Paintbrush, 
-  Lightbulb, 
-  Settings,
-  ArrowRight,
-  X,
-  CheckCircle,
-  Clock,
-  Users
+  X
 } from "lucide-react";
 
 // Professional Glass Card Component with Blue-Cyan Theme
@@ -206,71 +194,55 @@ export default function Services() {
 
   const services = [
     {
-      icon: Code,
       title: "Website Development",
-      description: "Enterprise-grade web applications built with modern frameworks, optimized for performance, scalability, and user experience.",
       gradient: "from-[#3480cb] to-[#52b9fd]",
-      features: ["React & Next.js", "Performance Optimized", "Scalable Architecture"],
       delay: 0
     },
     {
-      icon: Smartphone,
       title: "Mobile Application",
-      description: "Native and cross-platform mobile solutions delivering exceptional user experiences across iOS and Android platforms.",
       gradient: "from-[#3480cb] to-[#52b9fd]",
-      features: ["Cross-Platform", "Native Performance", "App Store Ready"],
       delay: 0.1
     },
     {
-      icon: Settings,
       title: "Software Development",
-      description: "Custom software solutions engineered to solve complex business challenges with reliability and scalability.",
       gradient: "from-[#3480cb] to-[#52b9fd]",
-      features: ["Custom Solutions", "Enterprise Architecture", "Legacy Integration"],
       delay: 0.2
     },
     {
-      icon: Bot,
       title: "AI & Automation",
-      description: "Intelligent automation solutions and machine learning implementations to optimize operations and drive efficiency.",
       gradient: "from-[#3480cb] to-[#52b9fd]",
-      features: ["Machine Learning", "Process Automation", "Intelligent Analytics"],
       delay: 0.3
     },
     {
-      icon: Lightbulb,
       title: "Consulting",
-      description: "Strategic technology consulting and digital transformation guidance to accelerate business growth and innovation.",
       gradient: "from-[#3480cb] to-[#52b9fd]",
-      features: ["Digital Strategy", "Technology Roadmap", "Innovation Planning"],
       delay: 0.4
     },
     {
-      icon: Paintbrush,
       title: "Digital Marketing",
-      description: "Data-driven marketing strategies and campaigns to boost online presence and drive measurable business growth.",
       gradient: "from-[#3480cb] to-[#52b9fd]",
-      features: ["SEO & SEM", "Social Media Marketing", "Analytics & ROI Tracking"],
       delay: 0.5
     }
   ];
 
   const handleLearnMore = (service) => {
+<<<<
     setSelectedService(service);
     setModalOpen(true);
   };
-
+====
+    // Modal disabled as per request to keep it simple
+  };
+>>>>
   return (
     <>
-      <section id="services" className="py-24 bg-gradient-to-br from-blue-50 via-cyan-50/50 to-blue-50 relative overflow-hidden">
-        {/* Enhanced Background Elements */}
-        <div className="absolute inset-0 bg-grid-blue-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.4))] -z-0"></div>
-        <div className="absolute top-20 left-10 w-96 h-96 bg-blue-300/30 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-300/30 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-float-delayed"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-200/20 to-cyan-200/20 rounded-full filter blur-3xl opacity-30"></div>
+      <section id="services" className="py-24 bg-white relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute top-20 left-10 w-96 h-96 bg-blue-300/10 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-float"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-300/10 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-float-delayed"></div>
         
         <div className="container mx-auto px-6 relative z-10">
-          {/* Enhanced Header */}
+          {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -278,26 +250,12 @@ export default function Services() {
             viewport={{ once: true }}
             className="text-center mb-20"
           >
-            <motion.div
-              initial={{ scale: 0, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.2, type: "spring", damping: 15 }}
-              viewport={{ once: true }}
-              className="inline-block mb-4"
-            >
-              <span className="text-blue-600 font-semibold text-lg tracking-wide uppercase bg-gradient-to-r from-blue-50 to-cyan-50 px-4 py-2 rounded-full border border-blue-200">Our Expertise</span>
-            </motion.div>
-            
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">
-              Professional Services
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight tracking-tight">
+              Our Services in Transforming Business Through Innovative Technology
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Comprehensive technology solutions engineered to accelerate your digital transformation 
-              with enterprise-grade quality and proven methodologies.
-            </p>
           </motion.div>
 
-          {/* Enhanced Services Grid */}
+          {/* Services Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <motion.div
@@ -308,113 +266,29 @@ export default function Services() {
                 viewport={{ once: true }}
                 className="group cursor-pointer"
               >
-                <GlassCard className="rounded-3xl overflow-hidden h-full hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-700 transform group-hover:scale-[1.03] group-hover:-translate-y-2 relative border-2 hover:border-blue-300/50">
+                <GlassCard className="rounded-3xl overflow-hidden h-full hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-700 transform group-hover:scale-[1.03] group-hover:-translate-y-2 relative border-2 hover:border-blue-300/50 flex flex-col">
                   <div className={`h-2 w-full bg-gradient-to-r ${service.gradient}`}></div>
-                  <div className="p-8">
-                    <div className="flex items-center justify-between mb-6">
-                      <motion.div 
-                        whileHover={{ rotate: 5, scale: 1.1 }}
-                        transition={{ type: "spring", damping: 15 }}
-                        className={`w-14 h-14 bg-gradient-to-br ${service.gradient} rounded-2xl flex items-center justify-center shadow-xl shadow-blue-500/40 transform transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-blue-500/50`}
-                      >
-                        <service.icon className="w-7 h-7 text-white" />
-                      </motion.div>
-                    </div>
-
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-cyan-600 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-500">
+                  <div className="p-8 text-center flex-1 flex items-center justify-center min-h-[160px]">
+                    <h3 className="text-2xl font-bold text-gray-900 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-cyan-600 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-500">
                       {service.title}
                     </h3>
-                    
-                    <p className="text-gray-600 leading-relaxed mb-6 text-base group-hover:text-gray-700 transition-colors duration-300">
-                      {service.description}
-                    </p>
-
-                    {/* Enhanced Features */}
-                    <div className="mb-8 space-y-3">
-                      {service.features.map((feature, featureIndex) => (
-                        <motion.div 
-                          key={featureIndex} 
-                          initial={{ opacity: 0, x: -10 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          transition={{ delay: featureIndex * 0.1 }}
-                          className="flex items-center text-sm text-gray-600 group-hover:text-blue-600 transition-colors duration-300"
-                        >
-                          <div className={`w-2 h-2 bg-gradient-to-r ${service.gradient} rounded-full mr-3 flex-shrink-0 group-hover:shadow-md group-hover:shadow-blue-500/50 transition-all duration-300`}></div>
-                          {feature}
-                        </motion.div>
-                      ))}
-                    </div>
-
-                    {/* Enhanced Learn More Button */}
-                    <div className="transform transition-all duration-500">
-                      <motion.button 
-                        onClick={() => handleLearnMore(service)}
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
-                        className={`w-full bg-gradient-to-r ${service.gradient} text-white font-semibold py-4 px-4 rounded-2xl transition-all duration-500 hover:shadow-xl hover:shadow-blue-500/40 flex items-center justify-center group/btn relative overflow-hidden border-2 border-transparent hover:border-white/20`}
-                      >
-                        <span className="relative z-10 flex items-center transition-all duration-300">
-                          Learn More 
-                          <ArrowRight className="w-4 h-4 ml-2 transition-all duration-500 group-hover/btn:translate-x-2 group-hover/btn:scale-110" />
-                        </span>
-                        <div className="absolute inset-0 bg-gradient-to-r from-[#3480cb] to-[#52b9fd] brightness-90 opacity-0 group-hover/btn:opacity-100 transition-all duration-500"></div>
-                        <div className="absolute inset-0 bg-white/10 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
-                      </motion.button>
-                    </div>
                   </div>
                 </GlassCard>
               </motion.div>
             ))}
           </div>
-
-          {/* Enhanced CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="text-center mt-20"
-          >
-            <div className="bg-gradient-to-r from-blue-500 via-blue-600 to-cyan-500 rounded-3xl p-12 text-white relative overflow-hidden shadow-2xl shadow-blue-500/30 border border-blue-400/20">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20"></div>
-              <div className="absolute top-0 right-0 w-96 h-96 bg-cyan-400/10 rounded-full filter blur-3xl opacity-50"></div>
-              <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-400/10 rounded-full filter blur-3xl opacity-50"></div>
-              <div className="relative z-10">
-                <h3 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h3>
-                <p className="text-blue-100 mb-8 max-w-2xl mx-auto text-lg">
-                  Partner with our expert team to accelerate your digital transformation and achieve measurable results.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <motion.button 
-                    onClick={() => navigate("/#contact")}
-                    whileHover={{ scale: 1.05, y: -2 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="bg-white text-blue-600 font-semibold py-4 px-8 rounded-2xl hover:shadow-2xl hover:shadow-white/20 transition-all duration-500 border-2 border-transparent hover:border-blue-200"
-                  >
-                    Schedule Consultation
-                  </motion.button>
-                  <motion.button 
-                    onClick={() => navigate("/portfolio")}
-                    whileHover={{ scale: 1.05, y: -2 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="border-2 border-white/80 text-white font-semibold py-4 px-8 rounded-2xl hover:bg-white/10 hover:shadow-xl transition-all duration-500 backdrop-blur-sm"
-                  >
-                    View Portfolio
-                  </motion.button>
-                </div>
-              </div>
-            </div>
-          </motion.div>
         </div>
       </section>
 
+<<<<
       {/* Service Details Modal */}
       <ServiceModal 
         service={selectedService} 
         isOpen={modalOpen} 
         onClose={() => setModalOpen(false)} 
       />
-
+====
+>>>>
       <style>{`
               @keyframes float {
                 0%, 100% { transform: translate(0px, 0px) scale(1) rotate(0deg); }
