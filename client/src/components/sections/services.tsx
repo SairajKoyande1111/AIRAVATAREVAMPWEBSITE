@@ -49,22 +49,23 @@ export default function Services() {
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-300/10 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-float-delayed"></div>
         
         <div className="container mx-auto px-6 relative z-10">
-          {/* Header */}
+          {/* Header Section */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-light mb-4 sm:mb-6 leading-tight tracking-wide">
-              <span className="text-black tracking-wide sm:tracking-wider md:tracking-widest block uppercase">
-                Innovative Technology Services
-              </span>
-              <span className="text-black text-sm xs:text-base sm:text-lg md:text-xl lg:text-4xl block mt-2 text-blue-500">
+            <motion.h1
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="text-4xl lg:text-7xl font-extralight text-gray-900 mb-8 tracking-tight leading-tight"
+            >
+              Innovative Technology Services
+              <br />
+              <span className="font-light bg-gradient-to-r from-blue-500 via-blue-500 to-cyan-500 bg-clip-text text-transparent">
                 for Business Growth
               </span>
-            </h1>
+            </motion.h1>
           </motion.div>
 
           {/* Services Grid */}
